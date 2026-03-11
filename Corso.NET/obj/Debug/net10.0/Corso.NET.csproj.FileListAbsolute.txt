@@ -1,0 +1,14 @@
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\obj\Debug\net10.0\Corso.NET.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\obj\Debug\net10.0\Corso.NET.AssemblyInfoInputs.cache
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\obj\Debug\net10.0\Corso.NET.AssemblyInfo.cs
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\obj\Debug\net10.0\Corso.NET.csproj.CoreCompileInputs.cache
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\bin\Debug\net10.0\Corso.NET.exe
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\bin\Debug\net10.0\Corso.NET.deps.json
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\bin\Debug\net10.0\Corso.NET.runtimeconfig.json
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\bin\Debug\net10.0\Corso.NET.dll
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\bin\Debug\net10.0\Corso.NET.pdb
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\obj\Debug\net10.0\Corso.NET.dll
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\obj\Debug\net10.0\refint\Corso.NET.dll
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\obj\Debug\net10.0\Corso.NET.pdb
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\obj\Debug\net10.0\Corso.NET.genruntimeconfig.cache
+C:\Users\Maurizio\source\repos\Corso.NET\Corso.NET\obj\Debug\net10.0\ref\Corso.NET.dll

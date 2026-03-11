@@ -1,0 +1,28 @@
+﻿1. Puntatore Managed (Riferimento)
+In .NET, quando dichiari una classe (MyClass obj = new MyClass();), obj è un puntatore managed (gestito).
+Chi lo gestisce: Il Garbage Collector (GC) [1].
+Posizione: Punta a oggetti nello Heap [2].
+Dinamicità: Il GC può spostare l'oggetto in un altro indirizzo di memoria per deframmentare la RAM [3]. Il puntatore viene aggiornato automaticamente dal framework senza che tu te ne accorga.
+Sicurezza: Non puoi farci aritmetica (niente obj++) e non puoi accedere a zone di memoria non autorizzate [1].
+
+2. Puntatore Unmanaged (Puntatore "Nudo")
+È quello che hai usato con byte* ptr.
+Chi lo gestisce: Tu (il programmatore) [4].
+Posizione: Punta a un indirizzo fisico fisso (solitamente nello Stack o in memoria allocata manualmente) [4].
+Staticità: L'indirizzo è un semplice numero. Se l'oggetto a cui punta viene spostato o eliminato, il puntatore diventa "orfano" (dangling pointer) e causa crash [5].
+Pericolosità: Permette l'aritmetica dei puntatori (ptr++) [4]. Puoi leggere e scrivere ovunque, rischiando di corrompere i dati del sistema.
+
+Confronto Rapido
+Caratteristica	Puntatore Managed (Reference)	Puntatore Unmanaged (Native)
+Sintassi C#	MyClass obj	byte* ptr
+Spostabile?	Sì, dal Garbage Collector	No, l'indirizzo è fisso
+Aritmetica?	No (errore di compilazione)	Sì (ptr + 1)
+Contesto	Codice standard (Safe)	Codice unsafe
+Pulizia	Automatica (GC)	Manuale (se allocato con Marshal)
+Il "Ponte": la keyword fixed
+Se vuoi usare un puntatore unmanaged su un oggetto managed (che il GC potrebbe spostare), devi usare la keyword fixed. Questa istruzione "inchioda" l'oggetto in memoria temporaneamente, impedendo al GC di muoverlo finché non hai finito di usare il puntatore [6].
+
+Caratteristica	ref byte riferimento (Managed)	byte* ptr (Unmanaged)
+Sicurezza	Safe: Non puoi fare riferimento++.	Unsafe: Puoi spostarti ovunque.
+Sintassi	La usi come una variabile normale.	Devi usare *ptr per leggere il valore.
+Garbage Collector	Se l'oggetto si sposta, .NET aggiorna il ref.	Se l'oggetto si sposta, il puntatore punta al vuoto.
