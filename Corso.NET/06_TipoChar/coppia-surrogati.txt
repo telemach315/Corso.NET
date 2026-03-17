@@ -1,0 +1,27 @@
+La necessità della coppia di surrogati (surrogate pair) nasce da un "errore di previsione" storico nello sviluppo dello standard Unicode e dalla struttura tecnica di UTF-16.
+
+Motivi:
+1. Il limite originale dei 16 bit
+Quando è stato creato Unicode, si pensava che 65.536 combinazioni (ovvero) fossero sufficienti per mappare tutti i caratteri del mondo.
+Questo intervallo è chiamato BMP (Basic Multilingual Plane).
+Linguaggi come Java e C#, nati in quel periodo, adottarono UTF-16 come standard interno, usando il tipo char a 16 bit.
+
+2. L'esplosione dei caratteri (e delle Emoji)
+Ben presto ci si rese conto che 65.536 posti non bastavano per includere geroglifici, simboli matematici antichi e, successivamente, le emoji.
+Unicode è stato quindi esteso a oltre 1 milione di posizioni (fino a U+10FFFF).
+
+3. Il problema della compatibilità
+Poiché i sistemi esistenti (come .NET o Windows) usavano unità da 16 bit, non potevano semplicemente passare a 32 bit senza rompere tutta la compatibilità software.
+La soluzione: Usare due unità da 16 bit per rappresentare un singolo carattere "superiore".
+
+4. Come funziona la "Coppia"
+Per evitare che un computer confonda due caratteri normali con un'emoji, Unicode ha riservato un intervallo di codici "vuoti" chiamati Surrogati (da 0xD800 a 0xDFFF):
+High Surrogate (0xD800–0xDBFF): Indica al sistema: "Attenzione, non sono un carattere completo, leggi anche il prossimo!".
+Low Surrogate (0xDC00–0xDFFF): Fornisce la seconda parte dell'informazione.
+Esempio pratico con l'emoji 😀 (U+1F600):
+Il codice 0x1F600 è troppo grande per 16 bit.
+In UTF-16 viene "spezzato" nella coppia: 0xD83D (High) + 0xDE00 (Low).
+Il sistema vede 0xD83D, capisce che è l'inizio di un simbolo complesso e lo unisce al successivo per mostrare la faccina.
+In sintesi
+
+La coppia di surrogati è un "trucco matematico" che permette a UTF-16 (nato per i 16 bit) di rappresentare caratteri a 32 bit (come le emoji) senza dover cambiare la dimensione del tipo char.

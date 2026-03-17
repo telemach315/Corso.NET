@@ -1,8 +1,8 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace Corso.NET.Puntatori
+namespace Corso.NET._05_Puntatori
 {
-    internal unsafe class ValoriEIndirizzi
+    internal static unsafe class ValoriEIndirizzi
     {
         public static void StampaVariabili()
         {

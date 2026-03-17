@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Corso.NET._04_CastAndPromotions
 {
-    internal class CastAndPromotions
+    internal static class CastAndPromotions
     {
-        public static void EsempioCast()
+        public static void EseguiCastAndPromotions()
         {
             //Tipi Interi:
             //Il tipo di default è int.

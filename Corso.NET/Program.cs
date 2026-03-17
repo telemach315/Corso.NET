@@ -4,7 +4,17 @@
     {
         static void Main(string[] args)
         {
-            Puntatori.ValoriEIndirizzi.StampaVariabili();
+            // Lezione 2
+            // _02_ConsumoMemoria.Benchmarks.EseguiBenchmark();
+
+            // Lezione 4
+            // _04_CastAndPromotions.CastAndPromotions.EseguiCastAndPromotions();
+
+            // Lezione 5
+            // _05_Puntatori.ValoriEIndirizzi.StampaVariabili();
+
+            // Lezione 6
+            _06_TipoChar.EsempioChar.EseguiEsempioChar();
         }
     }
 }
