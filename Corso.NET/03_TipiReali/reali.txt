@@ -1,0 +1,25 @@
+half	System.Half	16 bit	Bassa precisione (Machine Learning/GPU)
+float	System.Single	32 bit	Precisione singola (Grafica/Giochi)
+double	System.Double	64 bit	Precisione doppia (Standard scientifico)
+decimal	System.Decimal	128 bit	Alta precisione finanziaria (Nessun errore di arrotondamento binario)
+
+Tipo	Bit Totali	Bit Esponente	Bit Mantissa	Bias	Precisione Decimale
+Half	16		5		10		15	~3 cifre
+Float	32		8		23		127	~7 cifre
+Double	64		11		52		1023	~15-17 cifre
+
+Il tipo System.Decimal in C# è profondamente diverso dai tipi float, double o Half. Mentre questi ultimi sono basati su una logica binaria (IEEE 754), il decimal è progettato per calcoli finanziari e monetari dove la precisione decimale è critica.
+Ecco la scomposizione dei suoi 128 bit (16 byte):
+
+1. La struttura dei 128 bit
+A differenza dei float, che sono divisi in segno, esponente binario e mantissa, il decimal è composto da:
+96 bit di Mantissa (Significando): Un numero intero positivo a 96 bit (che va da 0 a  2 alla 96 −1).
+1 bit di Segno: Indica se il numero è positivo o negativo.
+8 bit di Fattore di Scala (Esponente decimale): Un numero intero che indica dove posizionare la virgola, ma in base 10.
+23 bit inutilizzati: Non vengono usati per il calcolo.
+
+In sintesi: mentre il float cerca di far stare numeri enormi o piccolissimi in pochi bit usando le potenze di 2 (sacrificando la precisione decimale), il decimal usa un intero gigantesco e sposta la virgola per garantire che 0.1 + 0.2 sia esattamente 0.3.
+
+
+
+
