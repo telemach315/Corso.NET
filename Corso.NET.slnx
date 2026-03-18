@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="Corso.NET/Corso.NET.csproj" />
+  <Project Path="SondaSpaziale/SondaSpaziale.csproj" Id="4b881cfb-eb27-452a-981b-c9123f184ce9" />
 </Solution>

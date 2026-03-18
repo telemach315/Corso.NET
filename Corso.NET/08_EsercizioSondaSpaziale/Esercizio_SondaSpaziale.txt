@@ -1,0 +1,15 @@
+﻿Aggiungere al progetto "SondaSpaziale" 
+i seguenti dati usando i tipi primitivi più appropriati.
+
+variazioneTemperatura
+livelloRadiazioni
+identificativoSonda
+protocolloVersione
+porteAttive
+conteggioFotoni
+cicliCpuEseguiti
+pressioneInterna
+densitaAtmosferica
+valoreMissioneEuro
+sistemaOperativoAttivo
+classeSonda

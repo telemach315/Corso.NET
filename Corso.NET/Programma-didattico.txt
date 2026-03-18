@@ -25,4 +25,6 @@ I tipi UTF-8; UTF-16; UTF-32
 Relazione con la codifica ASCII
 Il tipo char e la codifica UTF-16
 Esempi d'uso del tipo char
+Il tipo boolean
+Esercizio: Sinulare i dati presenti su una sonda spaziale utilizzatndo i tipi primitivi più appropriati
 
