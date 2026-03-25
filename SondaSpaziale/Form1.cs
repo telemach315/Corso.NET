@@ -1,7 +1,28 @@
 namespace SondaSpaziale
 {
-    public partial class Form1 : Form
+   public partial class Form1 : Form
     {
+        // Interi con segno
+        sbyte variazioneTemperatura = -5;          // 8-bit
+        short livelloRadiazioni = 450;             // 16-bit
+        int identificativoSonda = 102456;          // 32-bit
+        long distanzaDallaTerraKm = 384400000L;    // 64-bit
+
+        // Interi senza segno
+        byte protocolloVersione = 2;               // 8-bit
+        ushort porteAttive = 65000;                // 16-bit
+        uint conteggioFotoni = 4000000000U;        // 32-bit
+        ulong cicliCpuEseguiti = 18446744073709551610UL; // 64-bit
+
+        // Virgola mobile e alta precisione
+        float pressioneInterna = 1.013f;           // 7 cifre precisione
+        double densitaAtmosferica = 0.00000045123d;// 15-17 cifre precisione
+        decimal valoreMissioneEuro = 15000000.75m; // 28-29 cifre (finanziario)
+
+        // Logici e testuali
+        bool sistemaOperativoAttivo = true;
+        char classeSonda = 'A';
+
         private double distanzaKm = 54600000.0;
         private const double VelocitaKmPerSecondo = 16.9995;
 
@@ -45,6 +66,9 @@ namespace SondaSpaziale
             lblDistanza.Text = $"{distanzaKm.ToString("N6")} km";
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
