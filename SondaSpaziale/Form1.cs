@@ -1,6 +1,6 @@
 namespace SondaSpaziale
 {
-   public partial class Form1 : Form
+    public partial class Form1 : Form
     {
         // Interi con segno
         sbyte variazioneTemperatura = -5;          // 8-bit
@@ -37,6 +37,10 @@ namespace SondaSpaziale
             timer1.Tick += new EventHandler(timer1_Tick);
             timer1.Interval = 10;
             timer1.Start();
+
+            btnSalva.DoubleClick += btnSalva_DoubleClick;
+            btnSalva.MouseEnter += btnSalva_MouseEnter;
+            btnSalva.MouseLeave += btnSalva_MouseLeave;
         }
 
         private void ConfiguraGrafica()
@@ -69,6 +73,32 @@ namespace SondaSpaziale
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalva_MouseEnter(object sender, EventArgs e)
+        {
+            lblRisultato.ForeColor = Color.White;
+        }
+        private void btnSalva_MouseLeave(object sender, EventArgs e)
+        {
+            lblRisultato.ForeColor = Color.Red;
+        }
+
+        private void btnSalva_Click(object sender, EventArgs e)
+        {
+            //lblRisultato.Text = "Dati salvati con successo!";
+        }
+
+        private void btnSalva_DoubleClick(object sender, EventArgs e)
+        {
+            lblRisultato.Text = "Ciao";
+        }
+
+        private void nuovoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form newform = new Form();
+            newform.Text = "Nuova Finestra";
+            newform.Show();
         }
     }
 }

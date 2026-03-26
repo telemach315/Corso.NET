@@ -37,7 +37,13 @@
             label5 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             lblStato = new Label();
+            btnSalva = new DoubleClickButton();
+            lblRisultato = new Label();
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            nuovoToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // pictureBox1
@@ -120,12 +126,57 @@
             lblStato.TabIndex = 6;
             lblStato.Text = "-";
             // 
+            // btnSalva
+            // 
+            btnSalva.Location = new Point(495, 275);
+            btnSalva.Name = "btnSalva";
+            btnSalva.Size = new Size(75, 23);
+            btnSalva.TabIndex = 7;
+            btnSalva.Text = "Salva";
+            btnSalva.UseVisualStyleBackColor = true;
+            btnSalva.Click += btnSalva_Click;
+            // 
+            // lblRisultato
+            // 
+            lblRisultato.AutoSize = true;
+            lblRisultato.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblRisultato.Location = new Point(495, 224);
+            lblRisultato.Name = "lblRisultato";
+            lblRisultato.Size = new Size(37, 30);
+            lblRisultato.TabIndex = 8;
+            lblRisultato.Text = "---";
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(1072, 24);
+            menuStrip1.TabIndex = 9;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuovoToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "File";
+            // 
+            // nuovoToolStripMenuItem
+            // 
+            nuovoToolStripMenuItem.Name = "nuovoToolStripMenuItem";
+            nuovoToolStripMenuItem.Size = new Size(180, 22);
+            nuovoToolStripMenuItem.Text = "Nuovo";
+            nuovoToolStripMenuItem.Click += nuovoToolStripMenuItem_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
             ClientSize = new Size(1072, 408);
+            Controls.Add(lblRisultato);
+            Controls.Add(btnSalva);
             Controls.Add(lblStato);
             Controls.Add(lblDistanza);
             Controls.Add(label5);
@@ -133,9 +184,13 @@
             Controls.Add(label2);
             Controls.Add(lblNome);
             Controls.Add(pictureBox1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -150,5 +205,10 @@
         private Label label5;
         private System.Windows.Forms.Timer timer1;
         private Label lblStato;
+        private DoubleClickButton btnSalva;
+        private Label lblRisultato;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem nuovoToolStripMenuItem;
     }
 }
