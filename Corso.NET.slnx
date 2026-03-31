@@ -1,5 +1,7 @@
 <Solution>
-  <Project Path="../EsempioForm/EsempioForm/EsempioForm.csproj" />
+  <Project Path="../EsempioForm/EsempioForm/EsempioForm.csproj">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
   <Project Path="Corso.NET/Corso.NET.csproj" />
   <Project Path="SondaSpaziale/SondaSpaziale.csproj" Id="4b881cfb-eb27-452a-981b-c9123f184ce9" />
 </Solution>
