@@ -1,4 +1,5 @@
-﻿namespace Corso.NET
+﻿using Corso.NET._09_Classi;
+namespace Corso.NET
 {
     internal static class Program
     {
@@ -14,7 +15,13 @@
             // _05_Puntatori.ValoriEIndirizzi.StampaVariabili();
 
             // Lezione 6
-            _06_TipoChar.EsempioChar.EseguiEsempioChar();
+            //_06_TipoChar.EsempioChar.EseguiEsempioChar();
+
+            // Lezione 9
+            Punto p = new Punto();
+            p.x = (Half)16.23;
+            p.y = (Half)23.11;
+            p.StampaCoordinate();
         }
     }
 }

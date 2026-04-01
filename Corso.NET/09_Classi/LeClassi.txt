@@ -1,0 +1,47 @@
+﻿Tipi Reference (Reference Types)
+I tipi riferimento (reference types) si caratterizzano poichè dal fatto chee memorizzano un "indirizzo" (puntatore) nello Stack,
+il quale punta all'oggetto reale memorizzato nello Heap.
+Comportamento: Quando copi un tipo reference, non stai copiando l'intero oggetto, ma solo l'indirizzo di memoria. 
+Se due variabili puntano allo stesso oggetto, modificando una verrà modificata anche l'altra.
+Esempi: Classi, interfacce, delegati, array e stringhe.
+
+Le Classi
+Cos'è una classe.
+La Classe è il pilastro della programmazione orientata agli oggetti (OOP).
+Una classe rappresenta un modo per definire un qualcosa che è in grado di rappresentare:
+  - un'entità (o una realtà);
+  - un concetto;
+  - un modello; 
+ed è lo strumento fondamentale di astrazione.
+Astrarre significa isolare unicamente le caratteristiche essenziali della realtà che si vuole rappresentare, ignorando il resto.
+
+Proprietà e Metodi di una classe
+Proprietà: Rappresentano lo stato dell'oggetto.
+Metodi: Rappresentano il comportamento dell'oggetto. Sono blocchi di codice che eseguono azioni (funzioni).
+
+   Classe come rappresentazione di un'Entità (un oggetto fisico)
+Quando modelli un'entità del mondo reale, la classe funge da identikit.
+Esempio: Se crei una classe Automobile, non stai costruendo una macchina vera, ma stai definendo cosa significa "essere un'automobile" per il tuo software.
+Attributi (Stato): Ha un colore, una targa, un livello di carburante.
+Comportamenti (Logica): Può accendersi, accelerare, frenare.
+
+   Classe come rappresentazione di un Concetto (un'idea astratta)
+Una classe può rappresentare qualcosa che non puoi toccare, ma che esiste logicamente.
+Esempio: Un punto nello piano o nello spazio. Non è un oggetto fisico, ma ha proprietà (coordinate x e y) 
+e regole (la distanza tra due punti, la posizione relativa).
+Esempio: Una TransazioneBancaria. Non è un oggetto fisico, ma un concetto che ha proprietà (data, importo, mittente) 
+e regole (non può essere negativa, deve essere autorizzata).
+
+   Classe come rappresentazione di un "Contratto" o "Modello"
+Immagina la classe come il progetto architettonico di una casa:
+Il progetto (la Classe) spiega dove vanno i muri e gli impianti, ma non puoi abitarci dentro.
+La casa costruita (chiamata Oggetto o Istanza) è la realizzazione concreta di quel progetto.
+Puoi costruirne 100 tutte uguali o con colori diversi, ma tutte seguiranno le regole stabilite nel progetto originale.
+
+Per definire una classe si usa la keyword "class".
+Per creare un oggetto (o istanza) di una classe si usa la keyword "new".
+
+In sintesi, una classe ha tre componenti fondamentali:
+Entità: "Cosa rappresenta?" (Un cliente, un prodotto, un nemico in un gioco).
+Stato: "Cosa sa di se stessa?" (Le sue proprietà/variabili).
+Comportamento: "Cosa sa fare?" (I suoi metodi).

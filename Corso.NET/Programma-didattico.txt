@@ -27,4 +27,10 @@ Il tipo char e la codifica UTF-16
 Esempi d'uso del tipo char
 Il tipo boolean
 Esercizio: Sinulare i dati presenti su una sonda spaziale utilizzatndo i tipi primitivi più appropriati
-
+WindowsForm: gli oggetti della casella degli strumenti (label, textbox, button, picturebox, ecc.)
+Uso di un file di testo per simulare i dati di un database
+App WindowsForm che permetta di ricercare, visualizzare ed inserire dati in un file di testo
+Il protocollo git
+Creazione di un repository git locale
+Il servizio GitHub
+Introduzione alle classi e agli oggetti
