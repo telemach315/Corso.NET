@@ -34,3 +34,6 @@ Il protocollo git
 Creazione di un repository git locale
 Il servizio GitHub
 Introduzione alle classi e agli oggetti
+La classe Punto
+Distanza tra due punti
+Void/ritorno di tipi: Calcolo della velocità
