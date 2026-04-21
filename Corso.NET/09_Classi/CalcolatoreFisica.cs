@@ -13,5 +13,16 @@
             double velocita = distanza / tempoSecondi;
             return velocita;
         }
+
+        public double CalcolaVelocita(double distanza, double tempoSecondi)
+        {
+            if (tempoSecondi <= 0)
+            {
+                Console.WriteLine("Errore: Il tempo deve essere maggiore di zero.");
+                return 0;
+            }
+            double velocita = distanza / tempoSecondi;
+            return velocita;
+        }
     }
 }
