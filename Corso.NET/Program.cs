@@ -31,16 +31,19 @@ namespace Corso.NET
             Punto p2 = new Punto();
             p2.x = (Half)18.44;
             p2.y = (Half)27.56;
-            
-            double distanza = p1.CalcolaDistanza(p2);
-            Console.WriteLine($"La distanza tra i due punti è: {distanza}");
 
+            double miadistanza = p1.CalcolaDistanza(p2);
+     
             double tempo = 10.5; // secondi
             CalcolatoreFisica calcolatore = new CalcolatoreFisica();
-            double velocitaRisultante = calcolatore.CalcolaVelocita(p1, p2, tempo);
-            Console.WriteLine($"Distanza percorsa: {p1.CalcolaDistanza(p2)} metri");
-            Console.WriteLine($"Tempo impiegato: {tempo} secondi");
-            Console.WriteLine($"Velocità calcolata: {velocitaRisultante} m/s");
+            double velocitaRisultante_metodo2 = calcolatore.CalcolaVelocita(miadistanza, tempo);
+            //Console.WriteLine($"Distanza percorsa: {p1.CalcolaDistanza(p2)} metri");
+            //Console.WriteLine($"Tempo impiegato: {tempo} secondi");
+            Console.WriteLine($"Velocità calcolata M2: {velocitaRisultante_metodo2} m/s");
+
+
+            double velocitaRisultante_metodo1 = calcolatore.CalcolaVelocita(p1, p2, tempo);
+            Console.WriteLine($"Velocità calcolata M1: {velocitaRisultante_metodo1} m/s");
         }
     }
 }
